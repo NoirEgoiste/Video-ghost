@@ -1,3 +1,3 @@
 # Video-ghost
 
-Vedeo hosting site 
+Video hosting site 
