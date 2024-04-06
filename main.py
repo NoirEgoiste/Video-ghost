@@ -1,9 +1,7 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from fastapi.responses import FileResponse
+from fastapi import FastAPI
 
-from Routers.user_router import router as user_router
-from Routers.video_router import router as video_router
+from routers.user_router import router as user_router
+from routers.video_router import router as video_router
 
 app = FastAPI(
     debug=True,
