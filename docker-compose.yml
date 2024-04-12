@@ -1,14 +1,18 @@
 version: "3"
 
 services:
-  video_ghost:
-    build: .
+  backend:
+    build:
+      context: .
     ports:
       - "8000:8000"
+    restart: always
     depends_on:
       - db
     env_file:
       - .env
+    volumes:
+      - ./:/app
 
   db:
     image: postgres:latest

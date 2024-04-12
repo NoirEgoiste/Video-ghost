@@ -1,5 +1,5 @@
 # Use the official Python image as a base image
-FROM python:3.12-slim-bookworm
+FROM python:3.11-slim-bookworm
 
 # Set environment variables for Poetry
 ENV POETRY_HOME="/opt/poetry" \
@@ -28,4 +28,4 @@ RUN poetry config virtualenvs.create false && \
 COPY . /app
 
 # Specify the command to run on container start
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
