@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 from schemas.user_schemas import User, CreateUser
 
-router = APIRouter(prefix="/Users", tags=["Users"])
+router = APIRouter(prefix="/Users", tags=["users"])
 
 
 @router.get("/users/{id}")

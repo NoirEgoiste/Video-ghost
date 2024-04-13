@@ -27,5 +27,7 @@ services:
     restart: always
     ports:
       - "5050:80"
+    volumes:
+      - ./:/pgadmin
     env_file:
       - .env
